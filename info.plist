@@ -172,7 +172,9 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>See README.md in the source repo at:
+
+https://github.com/zerowidth/zoom-calendar.alfredworkflow</string>
 	<key>uidata</key>
 	<dict>
 		<key>1FB4FAE8-BF37-41A6-8405-30962BCCA5C2</key>
@@ -208,6 +210,8 @@
 			<integer>65</integer>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string>0.0.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/zerowidth</string>
 </dict>
