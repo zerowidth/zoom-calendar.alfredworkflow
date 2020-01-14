@@ -2,7 +2,7 @@
 
 require_relative "alfred"
 
-ZOOM_REGEX = %r((?<url>https://\w+.zoom.us/./(?<meeting_id>\d+)))m
+ZOOM_REGEX = %r((?<url>https://\w+.zoom.us/./(?<meeting_id>\d+(\?pwd=\w+)?)))m
 HREF_REGEX = %r(<a .*href="(?<url>[^"]+)".*>(?<title>[^<]+)<\/a>)m # a href
 URL_REGEX = %r((?<url>https?://(?!(\w+\.)?zoom\.us)[^\b]+)\b)m # url, but not zoom
 NUM_REGEX = %r((?<number>\d{3}-?\d{3}-?\d{3}))
@@ -40,7 +40,8 @@ entries = events.map do |event|
     link_url = link_title = link[:url]
   end
 
-  url = "zoommtg://zoom.us/join?confno=#{match[:meeting_id]}"
+  meeting_id = match[:meeting_id].sub("?pwd","&pwd")
+  url = "zoommtg://zoom.us/join?confno=#{meeting_id}"
 
   mods = nil
   if link
