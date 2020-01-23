@@ -79,7 +79,7 @@ elsif match = paste.match(NUM_REGEX)
   )
 end
 
-if entries.empty?
+if entries.compact.empty?
   entries << Alfred::Item.new(
     title: "You have no zoom meetings coming up.",
     icon: icon,
