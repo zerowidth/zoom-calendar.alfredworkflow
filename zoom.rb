@@ -44,7 +44,7 @@ entries = events.map do |event|
   url = "zoommtg://zoom.us/join?confno=#{meeting_id}"
 
   mods = nil
-  if link
+  if link && !link_url.include?(".zoom.us")
     time << " (⌘ to also open #{link_title})"
     cmd = Alfred::Modifier.new \
       valid: true,
