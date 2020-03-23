@@ -2,7 +2,7 @@
 
 require_relative "alfred"
 
-ZOOM_REGEX = %r((?<url>https://\w+.zoom.us/./(?<meeting_id>\d+(\?pwd=\w+)?)))m
+ZOOM_REGEX = %r((?<url>https://(\w+\.)?zoom.us/./(?<meeting_id>\d+(\?pwd=\w+)?)))m
 HREF_REGEX = %r(<a .*href="(?<url>[^"]+)".*>(?<title>[^<]+)<\/a>)m # a href
 URL_REGEX = %r((?<url>https?://(?!(\w+\.)?zoom\.us)[^\b]+)\b)m # url, but not zoom
 NUM_REGEX = %r((?<number>\d{3}-?\d{3}-?\d{3}))
