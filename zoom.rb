@@ -22,10 +22,10 @@ end
 # -b '* ' define bullet character
 # -nnr " " notes separator to use instead of newline
 # -ps "|\\n|" sets field separator to just a newline
-# -po title,datetime,location,notes sets field order
-# -iep title,datetime,location,notes sets what fields to retrieve
+# -po title,datetime,location,url,notes sets field order
+# -iep title,datetime,location,url,notes sets what fields to retrieve
 # eventsToday+2 shows "now plus two days"
-output = `/usr/local/bin/icalbuddy -ea -n -b '* ' -nnr " " -ps "|\\n|" -po title,datetime,location,notes -iep title,datetime,location,notes eventsToday+2 2>&1`
+output = `/usr/local/bin/icalbuddy -ea -n -b '* ' -nnr " " -ps "|\\n|" -po title,datetime,location,url,notes -iep title,datetime,location,url,notes eventsToday+2 2>&1`
 error(output) if $? != 0
 
 events = output.split(/^\* /)[1..-1] || []
