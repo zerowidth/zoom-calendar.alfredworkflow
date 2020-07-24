@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B2CE8C6E-CB73-4E5B-9445-BC970B1E65FB</string>
+				<string>8FCA3772-830F-4C12-A227-DB49CB336DC8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -25,7 +25,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B10A1523-ECE4-466D-AD63-78A2786221C7</string>
+				<string>1FB4FAE8-BF37-41A6-8405-30962BCCA5C2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -35,7 +35,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>B2CE8C6E-CB73-4E5B-9445-BC970B1E65FB</string>
+				<string>8FCA3772-830F-4C12-A227-DB49CB336DC8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -44,15 +44,17 @@
 				<false/>
 			</dict>
 		</array>
-		<key>B10A1523-ECE4-466D-AD63-78A2786221C7</key>
+		<key>8FCA3772-830F-4C12-A227-DB49CB336DC8</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1FB4FAE8-BF37-41A6-8405-30962BCCA5C2</string>
+				<string>B2CE8C6E-CB73-4E5B-9445-BC970B1E65FB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>sourceoutputuid</key>
+				<string>1D35AB79-38A7-4C09-8692-F1BACB40222D</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -71,27 +73,10 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>inputstring</key>
-				<string>{var:link}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>B10A1523-ECE4-466D-AD63-78A2786221C7</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>{var:link}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -170,6 +155,36 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{query}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>.+</string>
+						<key>outputlabel</key>
+						<string>open</string>
+						<key>uid</key>
+						<string>1D35AB79-38A7-4C09-8692-F1BACB40222D</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>ignore</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>8FCA3772-830F-4C12-A227-DB49CB336DC8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>See README.md in the source repo at:
@@ -182,7 +197,7 @@ https://github.com/zerowidth/zoom-calendar.alfredworkflow</string>
 			<key>note</key>
 			<string>var:link</string>
 			<key>xpos</key>
-			<integer>320</integer>
+			<integer>195</integer>
 			<key>ypos</key>
 			<integer>35</integer>
 		</dict>
@@ -193,14 +208,12 @@ https://github.com/zerowidth/zoom-calendar.alfredworkflow</string>
 			<key>ypos</key>
 			<integer>65</integer>
 		</dict>
-		<key>B10A1523-ECE4-466D-AD63-78A2786221C7</key>
+		<key>8FCA3772-830F-4C12-A227-DB49CB336DC8</key>
 		<dict>
-			<key>note</key>
-			<string>extra link set?</string>
 			<key>xpos</key>
-			<integer>220</integer>
+			<integer>320</integer>
 			<key>ypos</key>
-			<integer>35</integer>
+			<integer>100</integer>
 		</dict>
 		<key>B2CE8C6E-CB73-4E5B-9445-BC970B1E65FB</key>
 		<dict>
