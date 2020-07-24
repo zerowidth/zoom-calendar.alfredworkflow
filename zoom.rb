@@ -51,7 +51,12 @@ entries = events.map do |event|
       subtitle: "Join meeting and open #{link_title} (#{link_url})",
       arg: url,
       variables: { link: link_url }
-    mods = Alfred::Modifiers.new cmd: cmd
+    alt = Alfred::Modifier.new \
+      valid: true,
+      subtitle: "Open #{link_title} (#{link_url})",
+      arg: "",
+      variables: { link: link_url }
+    mods = Alfred::Modifiers.new cmd: cmd, alt: alt
   end
 
   Alfred::Item.new \
