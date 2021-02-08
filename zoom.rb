@@ -2,9 +2,9 @@
 
 require_relative "alfred"
 
-ZOOM_REGEX = %r((?<url>https://(\w+\.)?zoom.us/./(?<meeting_id>\d+(\?pwd=\w+)?)))m
+ZOOM_REGEX = %r((?<url>https://([a-z0-9-]+\.)?zoom.us/./(?<meeting_id>\d+(\?pwd=\w+)?)))mi
 HREF_REGEX = %r(<a .*href="(?<url>[^"]+)".*>(?<title>[^<]+)<\/a>)m # a href
-URL_REGEX = %r((?<url>https?://(?!(\w+\.)?zoom\.us)[^\b]+)\b)m # url, but not zoom
+URL_REGEX = %r((?<url>https?://(?!([a-z0-9-]+\.)?zoom\.us)[^\b]+)\b)mi # url, but not zoom
 NUM_REGEX = %r((?<number>\d{3}-?\d{3}-?\d{3}))
 
 icon = Alfred::Icon.new(path: "icon.png")
